@@ -2,7 +2,8 @@
 <h1>Add/Edit Form</h1>
 <%
 	PortletURL updateBookURL = renderResponse.createActionURL();
-	updateBookURL.setParameter(ActionRequest.ACTION_NAME, "updateBook");
+	updateBookURL.setParameter(ActionRequest.ACTION_NAME, 
+			LibraryConstants.ACTION_UPDATE_BOOK);
 %>
 <form name="<portlet:namespace/>fm" method="post" 
 	action="<%= updateBookURL.toString()%>">
