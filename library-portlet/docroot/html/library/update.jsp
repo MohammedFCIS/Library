@@ -7,7 +7,9 @@
 %>
 <aui:form method="POST" name="fm" 
 	action="<%= updateBookURL.toString()%>">
-	<aui:input name="bookTitle" label="Book Title"/>
+	<aui:input name="bookTitle" label="Book Title">
+		<aui:validator name="required"/>
+	</aui:input>
 	<aui:input name="bookAuthor" label="Book Author" helpMessage="Author"/>
 	<aui:button type="submit" value="Save"/>
 </aui:form>

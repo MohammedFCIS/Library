@@ -7,6 +7,7 @@
 		<portlet-name>library</portlet-name>
 		<icon>/icon.png</icon>
 		<header-portlet-css>/css/main.css</header-portlet-css>
+		<header-portal-javascript>http://code.jquery.com/jquery-latest.min.js</header-portal-javascript>
 		<footer-portlet-javascript>
 			/js/main.js
 		</footer-portlet-javascript>
