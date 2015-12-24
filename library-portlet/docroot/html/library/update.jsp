@@ -5,13 +5,11 @@
 	updateBookURL.setParameter(ActionRequest.ACTION_NAME, 
 			LibraryConstants.ACTION_UPDATE_BOOK);
 %>
-<form name="<portlet:namespace/>fm" method="post" 
+<aui:form method="POST" name="fm" 
 	action="<%= updateBookURL.toString()%>">
-	Book Title:<input type="text" name="<portlet:namespace/>bookTitle"/>
-	<br/>
-	Book Author:<input type="text" name="<portlet:namespace/>bookAuthor"/>
-	<br/>
-	<input type="submit" value="Save"/>
-</form>
+	<aui:input name="bookTitle" label="Book Title"/>
+	<aui:input name="bookAuthor" label="Book Author"/>
+	<aui:button type="submit" value="Save"/>
+</aui:form>
 <br/>
 <a href="<portlet:renderURL/>">&laquo; Go Back</a>
