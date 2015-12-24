@@ -2,4 +2,8 @@
 
 <portlet:defineObjects />
 
-This is the <b>Library</b> portlet in View mode.
+<portlet:renderURL var="updateBookURL">
+	<portlet:param name="jspPage" value="/html/library/update.jsp"/>
+</portlet:renderURL>
+<br/>
+<a href="<%= updateBookURL%>"> Add new Book &raquo;</a>
