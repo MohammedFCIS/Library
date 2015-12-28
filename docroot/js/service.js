@@ -1,1 +1,1 @@
-Liferay.Service.register("Liferay.Service.LSM", "com.slayer.service", "library-portlet");
+Liferay.Service.register("Liferay.Service.lms", "com.lms.slayer.service", "Library Management System-portlet");
