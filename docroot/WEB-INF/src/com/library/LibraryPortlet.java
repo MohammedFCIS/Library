@@ -23,8 +23,6 @@ public class LibraryPortlet extends MVCPortlet {
 	throws IOException, PortletException{
 		String bookTitle = ParamUtil.getString(request, "bookTitle");
 		String bookAuthor = ParamUtil.getString(request, "bookAuthor");
-		System.out.println("bookTitle:" + bookTitle);
-		System.out.println("bookAuthor:" + bookAuthor);
 		insetBook(bookTitle, bookAuthor);
 	}
 
