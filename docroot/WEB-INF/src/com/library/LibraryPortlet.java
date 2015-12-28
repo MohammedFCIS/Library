@@ -25,6 +25,10 @@ public class LibraryPortlet extends MVCPortlet {
 		String bookAuthor = ParamUtil.getString(request, "bookAuthor");
 		System.out.println("bookTitle:" + bookTitle);
 		System.out.println("bookAuthor:" + bookAuthor);
+		insetBook(bookTitle, bookAuthor);
+	}
+
+	private void insetBook(String bookTitle, String bookAuthor) {
 		book book = new bookImpl();
 		long lMSBookId = 0;
 		try{
