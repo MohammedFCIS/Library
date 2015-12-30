@@ -269,6 +269,11 @@ public class bookLocalServiceUtil {
 		return getService().invokeMethod(name, parameterTypes, arguments);
 	}
 
+	public static com.lms.slayer.model.book insetBook(
+		java.lang.String bookTitle, java.lang.String bookAuthor) {
+		return getService().insetBook(bookTitle, bookAuthor);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}

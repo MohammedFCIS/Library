@@ -14,6 +14,12 @@
 
 package com.lms.slayer.service.impl;
 
+import java.util.Date;
+
+import com.liferay.counter.service.CounterLocalServiceUtil;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.lms.slayer.model.book;
+import com.lms.slayer.model.impl.bookImpl;
 import com.lms.slayer.service.base.bookLocalServiceBaseImpl;
 
 /**
@@ -31,9 +37,24 @@ import com.lms.slayer.service.base.bookLocalServiceBaseImpl;
  * @see com.lms.slayer.service.bookLocalServiceUtil
  */
 public class bookLocalServiceImpl extends bookLocalServiceBaseImpl {
-	/*
-	 * NOTE FOR DEVELOPERS:
-	 *
-	 * Never reference this interface directly. Always use {@link com.lms.slayer.service.bookLocalServiceUtil} to access the book local service.
-	 */
+	
+	public book insetBook(String bookTitle, String bookAuthor) {
+		book book = new bookImpl();
+		long lMSBookId = 0;
+		try{
+			lMSBookId = CounterLocalServiceUtil.increment();
+		}catch(SystemException e){
+			e.printStackTrace();
+		}
+		book.setBookId(lMSBookId);
+		book.setTitle(bookTitle);
+		book.setAuthor(bookAuthor);
+		book.setCreateDate(new Date());
+		try{
+			addbook(book);
+		}catch(SystemException e){
+			e.printStackTrace();
+		}
+		return book;
+	}
 }

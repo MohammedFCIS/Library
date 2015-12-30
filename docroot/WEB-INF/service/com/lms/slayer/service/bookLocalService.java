@@ -238,4 +238,7 @@ public interface bookLocalService extends BaseLocalService, InvokableLocalServic
 	public java.lang.Object invokeMethod(java.lang.String name,
 		java.lang.String[] parameterTypes, java.lang.Object[] arguments)
 		throws java.lang.Throwable;
+
+	public com.lms.slayer.model.book insetBook(java.lang.String bookTitle,
+		java.lang.String bookAuthor);
 }

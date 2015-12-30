@@ -258,6 +258,11 @@ public class bookLocalServiceWrapper implements bookLocalService,
 		return _bookLocalService.invokeMethod(name, parameterTypes, arguments);
 	}
 
+	public com.lms.slayer.model.book insetBook(java.lang.String bookTitle,
+		java.lang.String bookAuthor) {
+		return _bookLocalService.insetBook(bookTitle, bookAuthor);
+	}
+
 	/**
 	 * @deprecated Renamed to {@link #getWrappedService}
 	 */

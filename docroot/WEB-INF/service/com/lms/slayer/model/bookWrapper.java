@@ -212,7 +212,7 @@ public class bookWrapper implements book, ModelWrapper<book> {
 		return new bookWrapper((book)_book.clone());
 	}
 
-	public int compareTo(book book) {
+	public int compareTo(com.lms.slayer.model.book book) {
 		return _book.compareTo(book);
 	}
 
@@ -221,15 +221,15 @@ public class bookWrapper implements book, ModelWrapper<book> {
 		return _book.hashCode();
 	}
 
-	public com.liferay.portal.model.CacheModel<book> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<com.lms.slayer.model.book> toCacheModel() {
 		return _book.toCacheModel();
 	}
 
-	public book toEscapedModel() {
+	public com.lms.slayer.model.book toEscapedModel() {
 		return new bookWrapper(_book.toEscapedModel());
 	}
 
-	public book toUnescapedModel() {
+	public com.lms.slayer.model.book toUnescapedModel() {
 		return new bookWrapper(_book.toUnescapedModel());
 	}
 

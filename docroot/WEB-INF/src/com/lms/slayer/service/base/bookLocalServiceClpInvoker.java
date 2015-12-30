@@ -105,6 +105,12 @@ public class bookLocalServiceClpInvoker {
 		_methodName39 = "setBeanIdentifier";
 
 		_methodParameterTypes39 = new String[] { "java.lang.String" };
+
+		_methodName44 = "insetBook";
+
+		_methodParameterTypes44 = new String[] {
+				"java.lang.String", "java.lang.String"
+			};
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -208,6 +214,12 @@ public class bookLocalServiceClpInvoker {
 			return null;
 		}
 
+		if (_methodName44.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes44, parameterTypes)) {
+			return bookLocalServiceUtil.insetBook((java.lang.String)arguments[0],
+				(java.lang.String)arguments[1]);
+		}
+
 		throw new UnsupportedOperationException();
 	}
 
@@ -247,4 +259,6 @@ public class bookLocalServiceClpInvoker {
 	private String[] _methodParameterTypes38;
 	private String _methodName39;
 	private String[] _methodParameterTypes39;
+	private String _methodName44;
+	private String[] _methodParameterTypes44;
 }
